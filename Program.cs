@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Core5_0_Egitim
+namespace WebApplication1
 {
     public class Program
     {

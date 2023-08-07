@@ -1,0 +1,22 @@
+﻿@*@using WebApplication1.Extensions
+
+@Html.TextBox("txtadi",null,new { style  = "background-color:green; color: white"})
+
+@Html.CustomTextBox("txtcustomadi",null,"Adınız")*@
+<!-- Burada belirtilen sınıftan tag helperları çekiyoruz.-->
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, WebApplication1
+@*<form asp-action="GetProducts",asp-controller="Product"method="post">
+
+    <input type/>
+    <select>
+        <option></option>
+    </select>
+
+</form>*@
+@*<cache>
+    Cache : @DateTime.Now
+</cache>
+<br />
+@DateTime.Now*@
+<email mail = "tahirifdn@gmail.com" display="Tahiri'nin maili'"></email>

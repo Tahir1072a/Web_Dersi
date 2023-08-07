@@ -1,0 +1,30 @@
+﻿@*model List<WebApplication1.Models.Product>
+<ul>
+    @foreach(var product in Model)
+    {
+        <li>@product.Name</li>
+    }
+</ul>*@
+<h1>ViewBag</h1>
+<ul>
+    @foreach (var product in ViewBag.Products as List<WebApplication1.Models.Product>)
+    {
+        <li>@product.Name</li>
+    }
+</ul>
+<h2>ViewData</h2>
+<ul>
+    @foreach (var product in ViewData["products"] as List<WebApplication1.Models.Product>)
+    {
+        <li>@product.Name</li>
+    }
+</ul>
+<h3>TempData</h3>
+<ul>
+    @foreach (var product in TempData["products"] as List<WebApplication1.Models.Product>)
+    {
+        <li>@product.Name</li>
+    }
+</ul>
+@*Burada html helper kullanarak farklı bir view'i view içinde render edebiliyoruz. Ayrıca Bu viewi çağıran action metot üzerinden de gelen modeller bu sayfaya diekt olarak gitmektedir.*@
+@Html.Partial("~/Views/Product/Partials/ListPartial.cshtml")

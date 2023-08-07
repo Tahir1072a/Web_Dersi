@@ -1,0 +1,8 @@
+﻿@*@model WebApplication1.Models.ViewModels.UserProduct
+<h3>@Model.Product.Name</h3>
+<h3>@Model.User.Id</h3>*@
+
+@model (WebApplication1.Models.Product,WebApplication1.Models.User)
+
+<h3>@Model.Item1.Name</h3>
+<h3>@Model.Item2.Id</h3>
