@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Linq;
 using WebApplication1.Models;
 using WebApplication1.Models.ViewModels;
 
@@ -66,9 +67,10 @@ namespace WebApplication1.Controllers
             return View(tuple);
              
         }
-        public IActionResult CreateProduct(string id)
+        public IActionResult CreateProduct()
         {
-            var routeValues = Request.RouteValues; 
+            var headers = Request.Headers.ToList();
+            //var routeValues = Request.RouteValues; 
             //var query = Request.QueryString;
             //var a = Request.Query["a"];
             var product = new Product();

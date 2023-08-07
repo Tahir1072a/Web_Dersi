@@ -30,6 +30,7 @@ namespace WebApplication1
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllerRoute("Custom1", "{controller=Home}/{action=Index}/{a?}/{b?}/{id?}");
             });
         }
     }
