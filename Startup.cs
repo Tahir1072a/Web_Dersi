@@ -31,8 +31,8 @@ namespace WebApplication1
             //Ýsteðin varýþ noktasýdýr.
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute();
-                endpoints.MapControllerRoute("Custom1", "{controller=Home}/{action=Index}/{a?}/{b?}/{id?}");
+                //endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllerRoute("Custom", "{controller=Anasayfa}/{action=Anasayfa}/{a?}/{id?}");
             });
         }
     }

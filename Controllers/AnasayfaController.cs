@@ -8,7 +8,7 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-        public IActionResult Sayfa1()
+        public IActionResult HtmlBilgi()
         {
             return View();
         }
