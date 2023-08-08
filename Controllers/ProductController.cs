@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using WebApplication1.Models;
-using WebApplication1.Models.ViewModels;
 
 namespace WebApplication1.Controllers
 {
@@ -36,9 +35,9 @@ namespace WebApplication1.Controllers
         {
             var products = new List<Product>
             {
-                new Product {Id = 1 , Name  = "Tahiri", Quantity = 10},
-                new Product {Id = 2 , Name  = "Ahmet", Quantity = 20},
-                new Product {Id = 3 , Name  = "Sadık", Quantity = 1}
+                new Product {Email = "" , Name  = "Tahiri", Quantity = 10},
+                new Product {Email = "" , Name  = "Ahmet", Quantity = 20},
+                new Product {Email = "" , Name  = "Sadık", Quantity = 1}
             };
             #region Model Bazlı Veri Gönderme
             //return View(products);
@@ -56,7 +55,7 @@ namespace WebApplication1.Controllers
         }
         public IActionResult GetTupple()
         {
-            Product product = new Product { Id = 1, Name = "Tahiri", Quantity = 19 };
+            Product product = new Product { Email = "", Name = "Tahiri", Quantity = 19 };
             User user = new User { Id = 2 };
             //UserProduct userProduct = new();
             //userProduct.Product = product;
@@ -69,17 +68,41 @@ namespace WebApplication1.Controllers
         }
         public IActionResult CreateProduct()
         {
-            var headers = Request.Headers.ToList();
+            //var headers = Request.Headers.ToList();
             //var routeValues = Request.RouteValues; 
             //var query = Request.QueryString;
             //var a = Request.Query["a"];
-            var product = new Product();
-            return View(product);
+            //Tuple olarak nesene yakalama
+            //var tuple = (new Product(),new User());
+            return View();
         }
+        //[HttpPost]
+        //public IActionResult CreateProduct([Bind(Prefix ="Item1")]Product product,[Bind(Prefix ="Item2")]User user)
+        //{
+        //    return View();
+        //}
         [HttpPost]
         public IActionResult CreateProduct(Product product)
         {
-            return View();
+            //Kötü kod
+            //if(!string.IsNullOrEmpty(product.Name) && product.Name.Length <= 100)
+            //{
+            //    //Veri tabanı işlemleri
+            //    return View();
+            //}
+
+            //ModelState: Mvc de bir type'ın annotationslarının durumunu kontrol eden ve geriye sonuç dönen bir property.
+            if (ModelState.IsValid) //Doğrulama yapıldıysa...
+            {
+                //Veri tabanı işlemleri
+                return View();
+            }
+            else
+            {
+                //Loglama işlemleri ve kullanıcı bilgilendirmesi...
+            }
+            var messages = ModelState.ToList();
+            return View(product);
         }
     }
 }

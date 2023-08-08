@@ -1,3 +1,4 @@
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -15,7 +16,7 @@ namespace WebApplication1
         public void ConfigureServices(IServiceCollection services)
         {
             //MVC yaklaþýmýný kullanmak için ilgili service aktif ediyoruz.
-            services.AddControllersWithViews();
+            services.AddControllersWithViews().AddFluentValidation( x => x.RegisterValidatorsFromAssemblyContaining<Startup>());
         }
         //Pipeline
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -25,6 +26,7 @@ namespace WebApplication1
                 app.UseDeveloperExceptionPage();
             }
             // Gelen requestin rotasý, yani isteðin nereye hangi yapýldýðý burada belirlenir.
+            app.UseStaticFiles();
             app.UseRouting();
             //Ýsteðin varýþ noktasýdýr.
             app.UseEndpoints(endpoints =>
