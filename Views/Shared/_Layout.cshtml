@@ -1,0 +1,51 @@
+﻿<!-- Bu view layout yapılanması içerir. Yani ortak render edilen görüntü kodları burada yazılacaktır.-->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üst Menü Tasarımı</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+        }
+
+            nav a {
+                color: #fff;
+                text-decoration: none;
+                margin: 0 10px;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Üst Menü Tasarımı</h1>
+    </header>
+    <nav>
+        <a href="/Anasayfa/Anasayfa">Anasayfa</a>
+        <a href="/Anasayfa/Sayfa1">Sayfa 1</a>
+        <a href="/Anasayfa/Sayfa2">Sayfa 2</a>
+    </nav>
+
+    <div>
+        @RenderBody()
+    </div>
+
+</body>
+</html>
