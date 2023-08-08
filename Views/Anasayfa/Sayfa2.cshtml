@@ -1,6 +1,71 @@
-﻿@{
-    @*Bu şekilde her bir view de aynı layout yapılanmasını kullanmak zorunda kalmayız. Burada null vererek ilgili layout dosyasını ezebiliriz.*@
-    Layout = null;
-}
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alt Menü Tasarımı</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
 
-Bu bir sayfa2dir.
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+        }
+
+            nav a {
+                color: #fff;
+                text-decoration: none;
+                margin: 0 10px;
+            }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #f4f4f4;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            bottom: -100%; /* Altta saklı başlangıçta */
+            left: 0;
+            width: 100%;
+        }
+
+            .submenu.active {
+                bottom: 0; /* Altta görünür hale getirme */
+                display: block;
+            }
+    </style>
+    <script>
+        function toggleSubmenu() {
+            var submenu = document.getElementById("submenu");
+            submenu.classList.toggle("active");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Alt Menü Tasarımı</h1>
+    </header>
+    <nav>
+        <a href="#">Anasayfa</a>
+        <a href="#" onclick="toggleSubmenu()">Hakkımda</a>
+        <a href="#">İletişim</a>
+    </nav>
+    <div class="submenu" id="submenu">
+        <p>Hakkımda</p>
+        <p>İletişim Bilgilerim</p>
+    </div>
+</body>
+</html>

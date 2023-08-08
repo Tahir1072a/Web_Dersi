@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Üst Menü Tasarımı</title>
+    <title>Üst ve Alt Menü Tasarımı</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,14 +19,29 @@
             text-align: center;
         }
 
-        nav {
+        .upper-menu {
             background-color: #444;
             display: flex;
             justify-content: center;
             padding: 5px;
         }
 
-            nav a {
+            .upper-menu a {
+                color: #fff;
+                text-decoration: none;
+                margin: 0 10px;
+            }
+
+        .lower-menu {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #444;
+            text-align: center;
+            padding: 5px;
+        }
+
+            .lower-menu a {
                 color: #fff;
                 text-decoration: none;
                 margin: 0 10px;
@@ -37,15 +52,25 @@
     <header>
         <h1>Üst Menü Tasarımı</h1>
     </header>
-    <nav>
+    <div class="upper-menu">
         <a href="/Anasayfa/Anasayfa">Anasayfa</a>
-        <a href="/Anasayfa/HtmlBilgi">Sayfa 1</a>
+        <a href="/Anasayfa/HtmlBilgi">HtmlBilgi</a>
         <a href="/Anasayfa/Sayfa2">Sayfa 2</a>
-    </nav>
+    </div>
 
+    <div class="submenu" id="submenu">
+        <div class="submenu-content">
+            <p class="submenu-title">Hakkımda</p>
+            <p class="submenu-item">İsim: John Doe</p>
+            <p class="submenu-item">Meslek: Web Geliştirici</p>
+            <p class="submenu-item">E-posta: john@example.com</p>
+        </div>
+    </div>
+    <partial name="~/Views/Anasayfa/Partials/_subMenuPartial.cshtml" />
     <div>
         @RenderBody()
     </div>
 
+    
 </body>
 </html>
