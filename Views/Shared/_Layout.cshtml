@@ -58,14 +58,7 @@
         <a href="/Anasayfa/Sayfa2">Sayfa 2</a>
     </div>
 
-    <div class="submenu" id="submenu">
-        <div class="submenu-content">
-            <p class="submenu-title">Hakkımda</p>
-            <p class="submenu-item">İsim: John Doe</p>
-            <p class="submenu-item">Meslek: Web Geliştirici</p>
-            <p class="submenu-item">E-posta: john@example.com</p>
-        </div>
-    </div>
+    @await Component.InvokeAsync("Hakkımda") 
     <partial name="~/Views/Anasayfa/Partials/_subMenuPartial.cshtml" />
     <div>
         @RenderBody()
