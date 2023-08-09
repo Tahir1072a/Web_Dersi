@@ -1,79 +1,125 @@
-﻿<!DOCTYPE html>
-<!-- bildirimi, belgenin bir <span style="color: green;">HTML5</span> belgesi olduğunu tanımlar. -->
-
-<html>
-<!-- etiketi, bir <span style="color: green;">HTML</span> sayfasının kök elementidir. -->
-
+﻿<html lang="tr-Tr">
 <head>
-    <!-- etiketi, <span style="color: green;">HTML</span> sayfası hakkında <span style="color: blue;">meta</span> bilgileri içerir. -->
-
-    <title>
-        <!-- etiketi, <span style="color: green;">HTML</span> sayfası için bir başlık belirtir (bu başlık tarayıcının başlık çubuğunda veya sayfanın sekmesinde görüntülenir). -->
-        HTML Etiketleri
-    </title>
-
+    <!-- Veri hakkında bigi anlamına gelir meta!-->
+    <meta charset="UTF-8" />
+    <title>HTML Hakkında</title>
 </head>
+<body>
 
-<body style="background-color:powderblue">
-    <!-- etiketi, belgenin gövdesini tanımlar ve başlıklar, paragraflar, resimler, bağlantılar, tablolar, listeler vb. gibi tüm görünür içerikler için bir konteyner görevi görür. -->
+    <h1>📗 HTML OKUMA MATERYALİ</h1>
+    <nav>
+        <a href="blog.html" target="_blank">Blogs</a>
+        <a href="#">Boş Link</a>
+        <a href="#">Flexbox</a>
+        <a href="#">CSS GRİD</a>
+    </nav>
 
-    <h1>
-        <!-- etiketi, büyük bir başlık tanımlar. -->
-        HTML Etiketleri Hakkında Bilgi
-    </h1>
+    <article>
 
-    <p>
-        <!-- etiketi, bir paragraf tanımlar. -->
-        HTML etiketleri, HTML belgelerindeki yapıyı ve anlamı belirtmek için kullanılır.
-        Etiketler, açılış ve kapanış etiketleri arasına yerleştirilen içerikten oluşur.
-        Bazı etiketler ise kendi kendine kapanan etiketlerdir ve sadece açılış etiketi içerir.
-        Etiketlerin bazıları zorunlu iken bazıları isteğe bağlıdır.
-        Etiketlerin büyük küçük harf duyarlılığı yoktur ancak küçük harf kullanmak iyi bir uygulamadır.
-    </p>
-    <p>HTML bağlantıları, <a> etiketi ile tanımlanır.</p>
-    <p><a> etiketinin en önemli özelliği href özelliğidir. Bu özellik, bağlantının gideceği yeri belirtir.</p>
-    <p>Açılış <a> etiketi ile kapanış </a> etiketi arasındaki metin, bağlantı metnidir. Bu metin, kullanıcıya bağlantının nereye gittiğini gösterir.</p>
-    <p>Örnek: <a href="https://www.w3schools.com">w3schools</a></p>
-    <p>Bu örnekte, href özelliği https://www.w3schools.com adresini belirtir. Bu adres, W3Schools adlı bir web sitesidir. Bağlantı metni ise "Bu bir bağlantıdır" şeklindedir. Bu metin, kullanıcıya tıklayınca W3Schools sitesine gideceğini söyler.</p>
-    <h1>HTML Resimleri Hakkında Bilgi</h1>
-    <p>HTML resimleri, <img> etiketi ile tanımlanır.</p>
-    <p><img> etiketinin kaynak dosyası (src), alternatif metin (alt), genişlik (width) ve yükseklik (height) gibi özellikleri vardır.</p>
-    <p>Örnek: <img src="https://www.w3schools.com/images/img_girl.jpg" alt="W3Schools.com" width="104" height="142"></p>
-    <p>Bu örnekte, src özelliği w3schools.jpg dosyasını belirtir. Bu dosya, W3Schools sitesinin logosudur. alt özelliği ise "W3Schools.com" şeklindedir. Bu metin, resim görüntülenemediği durumlarda veya görme engelli kullanıcılar için kullanılır. width ve height özellikleri ise resmin genişliğini ve yüksekliğini piksel cinsinden belirtir.</p>
-    <h1>HTML Style Özelliği Hakkında Bilgi</h1>
-    <p>style özelliği, bir elemente renk, font, boyut gibi stiller eklemek için kullanılır.</p>
-    <p>Örnek:
-    <p style="color:red;">Bu bir kırmızı paragraftır.</p></p>
-    <p>Bu örnekte, style özelliği ile paragrafın rengi kırmızı olarak belirlenmiştir. style özelliği içinde CSS kuralları yazılır. CSS, web sayfalarının görünümünü biçimlendirmek için kullanılan bir dilidir.</p>
-    <p>style özelliği ile bir elemente birden fazla stil uygulamak mümkündür. Örneğin, aşağıdaki kodda paragrafın rengi, fontu ve boyutu değiştirilmiştir.</p>
-    <p>Örnek:
-    <p style="color:blue; font-family:Arial; font-size:20px;">Bu bir mavi paragraftır.</p></p>
-    <h1>HTML Title Attribute Hakkında Bilgi</h1>
-    <h2 title="Ben bir başlığım">The title Attribute</h2>
-    <p title="Ben bir ipucuyum">Mouse'yi paragrafın üstüne getirerek ipucunu okuyabilirsiniz.</p>
-    <h1>Başlık 1</h1>
-    <p>Bu bir textir.</p>
-    <hr> <!-- Görüldüğü üzere bir çizgi ile satırları ayırır.-->
-    <h2>Başlık 2</h2>
-    <p>Buda başka bir textir.</p>
-    <hr>
-    <pre> <!-- pre etiketi içerisnde yazılı olan metnin satırları ve bırakılan boşlukları koruyacak şekilde yapılanır. Görüntüler...-->
-    My Bonnie lies over the ocean.
+        <!-- Her web sayfasında sadece bir tane h1 olabilir.!-->
+        <!--alt : Bu chrome gibi araçların resimde ne olduğunu anlamasına yardımcı olur. Ayrıca görme engelli kişilerinde resmi anlayabilmesini sağlar.-->
+        <h2>Bir web etiketleme dili olan : HTML</h2>
+        <img src="~/ImageSource/Tokya-Ghoul-Profile.jpg"
+             alt="My Profile Picture"
+             height="50"
+             width="50" />
+        <p>
+            <strong>Tahiri Fidan</strong> Tarafından Çarşamba Günü yazıldı, 9
+            Ağustos 2023
+        </p>
+        <img src="~/ImageSource/post-img.jpg"
+             alt="HTML code içeren resim"
+             width="500" />
 
-    My Bonnie lies over the sea.
 
-    My Bonnie lies over the ocean.
+        <p>
+            Tüm modern web siteleri ve web uygulamaları üç <em>temel</em> teknoloji
+            kullanılarak oluşturulmuştur: HTML, CSS ve JavaScript. Bunlar web
+            dilleridir.
+        </p>
 
-    Oh, bring back my Bonnie to me.
-    </pre>
-    <p><mark>Süt</mark> almayı unutma!</p>
-    <p>My favorite color is <del>blue</del> red.</p>
-    <p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
-    <p>This is <sub>subscripted</sub> text.</p>
-    <p>This is <sup>superscripted</sup> text.</p>
+        <p>
+            Bu yazıda, HTML'ye odaklanalım. HTML'nin neyle ilgili olduğunu ve sizin
+            de neden öğrenmeniz gerektiğini öğreneceğiz.
+        </p>
+        <h3>HTML Nedir?</h3>
+        <p>
+            HTML, <strong>M</strong>etin <strong>İ</strong>şaretleme
+            <strong>D</strong>ili anlamına gelir. Web geliştiricilerinin bir web
+            sayfasının içeriğini yapılandırmak ve açıklamak için kullandıkları bir
+            biçimlendirme dilidir (bir programlama dili değil).
+        </p>
+        <p>
+            HTML, farklı içerik türlerini tanımlayan öğelerden oluşur: paragraflar,
+            bağlantılar, başlıklar, resimler, video vb. Web tarayıcıları HTML'yi
+            anlar ve HTML kodunu web siteleri olarak işler.
+        </p>
+        <p>HTML'de her öğe 3 bölümden oluşur:</p>
+        <ol>
+            <!-- Ordered List => Sıralı Liste-->
+            <li><em>Açılış etiketi</em></li>
+            <!--List Item => Liste elemanı-->
+            <li><em>Kapanış etiketi</em></li>
+            <li><em>Asıl eleman</em></li>
+        </ol>
+        <!-- target : _blank parametresini laırsa linki tıkladığında açık olan sayfa kapanmıyacak onun yerine linki yeni sekmede açacaktır.-->
+        <p>
+            Daha fazla bilgi için
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+               target="_blank">MDN Web Docs.</a>
+        </p>
+        <h3>Neden HTML Öğrenmeliyim</h3>
+        <p>
+            Web'in temel dilini öğrenmek için sayısız neden var. İşte bunlardan 5
+            tanesi:
+        </p>
+        <ul>
+            <!-- UnOrdered List => Sırasız Liste-->
+            <li>Temel web geliştirme dilini kullanabilmek</li>
+            <li>
+                Worpress veya Wix gibi araçlara güvenmek yerine güzel web sitelerini
+                elle oluşturmak için
+            </li>
+            <li>Web uygulamaları oluşturmak için</li>
+            <li>Arkadaşları etkilemek için</li>
+            <li>Eğlenmek için 😃</li>
+        </ul>
+        <p>
+            Umarız burada yeni bir şeyler öğrenmişsinizdir. Bir dahaki sefere
+            görüşürüz!
+        </p>
+    </article>
+    <!-- Kenar etiketidir. Ana bölümle doğrudan ilgisi olmayan ikincil bilgi içeren bölümdür-->
+    <aside>
+        <div>
+            <h4>İlgili Makaleler</h4>
+            <ul>
+                <li>
+                    <img src="~/ImageSource/related-1.jpg"
+                         alt="Kod yazan adam"
+                         height="75"
+                         width="75" />&nbsp; <a href="adam.html">Kod yazan adam</a>
+                    <h4><em>Ahmet Eldemir</em></h4>
+                </li>
+                <li>
+                    <img src="~/ImageSource/related-2.jpg"
+                         alt="Şimşek"
+                         height="75"
+                         width="75" />&nbsp;<a href="fırtına.html">Fırtınalar hakkında derin bilgiler</a>
+                    <h4><em>Sadık Sünbül</em></h4>
+                </li>
+                <li>
+                    <img src="~/ImageSource/related-3.jpg"
+                         alt="Bir takım kodlar"
+                         height="75"
+                         width="75" />&nbsp;<a href="kod.html">Derinlemesine kod yazma sanatı</a>
+                    <h4><em>Tahiri Fidan</em></h4>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <!--Alt bilgi-->
+    <footer>Copyright &copy; 2023 by Via Team</footer>
 </body>
-
 </html>
-
-
 

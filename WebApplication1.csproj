@@ -14,7 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
+    <None Include="wwwroot\ImageSource\challenges.jpg" />
+    <None Include="wwwroot\ImageSource\post-img.jpg" />
+    <None Include="wwwroot\ImageSource\related-1.jpg" />
+    <None Include="wwwroot\ImageSource\related-2.jpg" />
+    <None Include="wwwroot\ImageSource\related-3.jpg" />
+    <None Include="wwwroot\ImageSource\Tokya-Ghoul-Profile.jpg" />
   </ItemGroup>
 
 </Project>
