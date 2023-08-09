@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\Css\style.css" />
     <None Include="wwwroot\ImageSource\challenges.jpg" />
     <None Include="wwwroot\ImageSource\post-img.jpg" />
     <None Include="wwwroot\ImageSource\related-1.jpg" />

@@ -1,36 +1,45 @@
-﻿<html lang="tr-Tr">
+﻿@{
+    Layout = null;
+}
+
+<html lang="tr-Tr">
 <head>
     <!-- Veri hakkında bigi anlamına gelir meta!-->
     <meta charset="UTF-8" />
+    <link href="~/Css/style.css" rel="stylesheet" />
     <title>HTML Hakkında</title>
 </head>
 <body>
-
-    <h1>📗 HTML OKUMA MATERYALİ</h1>
-    <nav>
-        <a href="blog.html" target="_blank">Blogs</a>
-        <a href="#">Boş Link</a>
-        <a href="#">Flexbox</a>
-        <a href="#">CSS GRİD</a>
-    </nav>
-
+    <header class="Ana-Başlık">
+        <h1>📗 HTML OKUMA MATERYALİ</h1>
+        <nav>
+            <a class="Links" href="Anasayfa/Anasayfa.cshtml">Anasayfa</a>
+            <a class="Links" href="#" target="_blank">Boş Link</a>
+            <a class="Links" href="#">Flexbox</a>
+            <a class="Links" href="#">CSS GRİD</a>
+        </nav>
+    </header>
     <article>
+        <header>
+            <!-- Her web sayfasında sadece bir tane h1 olabilir.!-->
+            <!--alt : Bu chrome gibi araçların resimde ne olduğunu anlamasına yardımcı olur. Ayrıca görme engelli kişilerinde resmi anlayabilmesini sağlar.-->
+            <h2 class="Başlık">
+                Bir Web Etiketleme Dili Olan : <b id="HTML">HTML</b>
+            </h2>
+            <img src="~/ImageSource/Tokya-Ghoul-Profile.jpg"
+                 alt="My Profile Picture"
+                 height="75"
+                 width="85" />
+            <p id="Yazar">
+                <strong>Tahiri Fidan</strong> tarafından çarşamba günü yazıldı, 9
+                Ağustos 2023
+            </p>
 
-        <!-- Her web sayfasında sadece bir tane h1 olabilir.!-->
-        <!--alt : Bu chrome gibi araçların resimde ne olduğunu anlamasına yardımcı olur. Ayrıca görme engelli kişilerinde resmi anlayabilmesini sağlar.-->
-        <h2>Bir web etiketleme dili olan : HTML</h2>
-        <img src="~/ImageSource/Tokya-Ghoul-Profile.jpg"
-             alt="My Profile Picture"
-             height="50"
-             width="50" />
-        <p>
-            <strong>Tahiri Fidan</strong> Tarafından Çarşamba Günü yazıldı, 9
-            Ağustos 2023
-        </p>
-        <img src="~/ImageSource/post-img.jpg"
-             alt="HTML code içeren resim"
-             width="500" />
-
+            <img src="~/ImageSource/post-img.jpg"
+                 alt="HTML code içeren resim"
+                 width="500"
+                 height="200" />
+        </header>
 
         <p>
             Tüm modern web siteleri ve web uygulamaları üç <em>temel</em> teknoloji
@@ -55,7 +64,7 @@
             anlar ve HTML kodunu web siteleri olarak işler.
         </p>
         <p>HTML'de her öğe 3 bölümden oluşur:</p>
-        <ol>
+        <ol class="Üçlü">
             <!-- Ordered List => Sıralı Liste-->
             <li><em>Açılış etiketi</em></li>
             <!--List Item => Liste elemanı-->
@@ -84,7 +93,7 @@
             <li>Arkadaşları etkilemek için</li>
             <li>Eğlenmek için 😃</li>
         </ul>
-        <p>
+        <p class="Dilek-Mesajı">
             Umarız burada yeni bir şeyler öğrenmişsinizdir. Bir dahaki sefere
             görüşürüz!
         </p>
@@ -93,33 +102,34 @@
     <aside>
         <div>
             <h4>İlgili Makaleler</h4>
-            <ul>
+            <ul class="İlgili-Makaleler">
                 <li>
                     <img src="~/ImageSource/related-1.jpg"
                          alt="Kod yazan adam"
                          height="75"
                          width="75" />&nbsp; <a href="adam.html">Kod yazan adam</a>
-                    <h4><em>Ahmet Eldemir</em></h4>
+                    <h5 class="İlgili-Yazar"><em>By Ahmet Eldemir</em></h5>
                 </li>
                 <li>
                     <img src="~/ImageSource/related-2.jpg"
                          alt="Şimşek"
                          height="75"
                          width="75" />&nbsp;<a href="fırtına.html">Fırtınalar hakkında derin bilgiler</a>
-                    <h4><em>Sadık Sünbül</em></h4>
+                    <h5 class="İlgili-Yazar"><em>By Sadık Sünbül</em></h5>
                 </li>
                 <li>
                     <img src="~/ImageSource/related-3.jpg"
                          alt="Bir takım kodlar"
                          height="75"
                          width="75" />&nbsp;<a href="kod.html">Derinlemesine kod yazma sanatı</a>
-                    <h4><em>Tahiri Fidan</em></h4>
+                    <h5 class="İlgili-Yazar"><em>By Tahiri Fidan</em></h5>
                 </li>
             </ul>
         </div>
     </aside>
     <!--Alt bilgi-->
-    <footer>Copyright &copy; 2023 by Via Team</footer>
+    <footer>
+        <p id="Copyright">Copyright &copy; 2023 by Via Team</p>
+    </footer>
 </body>
 </html>
-
