@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="Magick.NET-Q16-AnyCPU" Version="13.2.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 
@@ -21,6 +22,15 @@
     <None Include="wwwroot\ImageSource\related-2.jpg" />
     <None Include="wwwroot\ImageSource\related-3.jpg" />
     <None Include="wwwroot\ImageSource\Tokya-Ghoul-Profile.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Fatura_Yönetimi\Data\" />
+    <Folder Include="Areas\Fatura_Yönetimi\Models\" />
+    <Folder Include="Areas\Fatura_Yönetimi\Views\" />
+    <Folder Include="Areas\Yönetim_Paneli\Data\" />
+    <Folder Include="Areas\Yönetim_Paneli\Models\" />
+    <Folder Include="Areas\Yönetim_Paneli\Views\" />
   </ItemGroup>
 
 </Project>
